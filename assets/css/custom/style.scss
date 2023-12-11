@@ -1,0 +1,274 @@
+$bg-color : #FAFDFE;
+$header-text-color : #1c1c1c;
+$white-color : #ffffff;
+$black-color : #000000;
+$border-color : #e8e8e8;
+$active-color : #562D88;
+$active-color-sec : #EF5326;
+$active-color-sec-hover : #f5734f;
+$shadow-color : rgba(0,0,0,.03);
+$shadow-color-sec : rgba(0,0,0,.15);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.main-wrap {
+    height: 100vh;
+    overflow-y: auto;
+    background-color: $bg-color;
+    position: relative;
+}
+.bg-white {
+    background-color: $white-color;
+}
+.font-weight-bold {
+    font-weight: 700;
+}
+.sk-active-color {
+    color: $active-color;
+}
+.sk-active-color-sec {
+    color: $active-color-sec;
+}
+.sk-active-color-hover {
+    color: $active-color;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    &:hover {
+        color: $active-color-sec;
+    }
+}
+.sk-text-color-hover-sec {
+    color: $black-color;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    &:hover {
+        color: $active-color-sec;
+    }
+}
+
+.sk-action-btn {
+    background-color: $active-color;
+    color: $white-color;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    &:hover {
+        color: $white-color;
+        background-color: $active-color-sec;
+    }
+}
+.sk-action-btn-sec {
+    background-color: $active-color-sec;
+    color: $white-color;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    &:hover {
+        color: $white-color;
+        background-color: $active-color;
+    }
+}
+
+header {
+    .header-top {
+        box-shadow: 0 1px 3px $shadow-color;
+        position: relative;
+        .header-text-style {
+            font-size: 13px;
+            color: $header-text-color;
+        }
+        .sk-social {
+            .icon-social-style {
+                color: $white-color;
+                font-size: 15px;
+                background: $black-color;
+                padding: 3px 4px;
+            }
+        }
+    }
+    .header-nav {
+        box-shadow: 0 1px 3px rgba(0,0,0,.05);
+        .navbar {
+            .container {
+                .sk-mobile-header {
+                    display: none;
+                }
+                .navbar-brand {
+                    width: 140px;
+                }
+            }
+        }
+    }
+}
+
+section.sk-job-market-form {
+    padding: 60px 0;
+    .sk-form {
+        max-width: 600px;
+        width: 100%;
+        form {
+            .body {
+                input {
+                    padding: 12px 20px;
+                }
+            }
+        }
+    }
+}
+
+section.sk-job-market-banner {
+    position: relative;
+    z-index: 1;
+    padding: 100px 0;
+    display: block;
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: #edededde;
+        z-index: -1;
+    }
+    .content {
+        max-width: 900px;
+        width: 100%;
+        .title {
+            font-size: 48px;
+            color: $active-color-sec;
+        }
+        form {
+            background-color: $white-color;
+        }
+        .sub-title {
+            max-width: 500px;
+            width: 100%;
+            .sobkisu {
+                color: $active-color;
+            }
+            .bazar {
+                color: $active-color-sec;
+            }
+        }
+    }
+}
+
+section.sk-job-categories {
+    .sk-heading {
+
+    }
+    .sk-categories {
+        .items {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(100px, 1fr));
+            column-gap: 40px;
+            row-gap: 40px;
+            .item {
+                box-shadow: 1px 2px 16px 1px $shadow-color-sec;
+                transition: all 0.3s ease 0s;
+                -webkit-transition: all 0.3s ease 0s;
+                &:hover {
+                    transform: translateY(-8px);
+                    .link {
+                        .title {
+                            color: $active-color-sec;
+                        }
+                    }
+                }
+                .link {
+                    .icon {
+                        width: 120px;
+                        height: 120px;
+                        overflow: hidden;
+                        img {
+                            max-width: 80px;
+                            object-fit: cover;
+                            margin: auto;
+                            display: table;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.job-subscribe {
+    background-color: $active-color;
+    .content {
+        max-width: 600px;
+        width: 100%;
+        form {
+            .bg-subscribe {
+                background-color: $active-color-sec;
+                cursor: pointer;
+                transition: all 0.3s ease 0s;
+                -webkit-transition: all 0.3s ease 0s;
+                &:hover {
+                    background-color: $active-color-sec-hover;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    .sk-footer-top {
+        .widget {
+            .custom_logo {
+                width: 180px;
+                height: 80px;
+                object-fit: cover;
+            }
+            .footer-text-title {
+                font-family: 'Roboto', sans-serif;
+                color: $black-color;
+                font-size: 18px;
+                margin-bottom: 16px;
+            } 
+            .list-unstyled {
+                li {
+                    a {
+                        line-height: 28px;
+                        transition: all 0.3s ease 0s;
+                        -webkit-transition: all 0.3s ease 0s;
+                        &:hover {
+                            color: $active-color-sec !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sk-help {
+        .text {
+            color: $active-color;
+            font-size: 38px;
+            span {
+                color: $active-color-sec;
+            }
+        }
+    }
+    .sk-copyright {
+        padding: 4px 0;
+        .sk-payment img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

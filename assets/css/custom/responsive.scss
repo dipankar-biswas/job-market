@@ -1,0 +1,155 @@
+$bg-color : #FAFDFE;
+$header-text-color : #1c1c1c;
+$white-color : #ffffff;
+$black-color : #000000;
+$border-color : #e8e8e8;
+$active-color : #562D88;
+$active-color-sec : #EF5326;
+$active-color-sec-hover : #f5734f;
+$shadow-color : rgba(0,0,0,.03);
+
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    
+}
+
+@media only screen and (max-width: 991px) {
+    
+}
+
+@media only screen and (max-width: 767px) {
+    header {
+        .header-top {
+            .sk-info {
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            .sk-social {
+                display: none !important;
+            }
+        }
+        .header-nav {
+            .navbar {
+                .container {
+                    .sk-mobile-header {
+                        display: flex !important;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        .sk-logo {
+                            width: 110px;
+                        }
+                        .navbar-toggler {
+                            font-size: 20px;
+                            border: 1px solid $border-color;
+                            padding: 4px 12px;
+                            &:focus {
+                                box-shadow: none !important;
+                            }
+                            .navbar-toggler-icon {
+                                width: 1.2em;
+                                height: 1.2em;
+                            }
+                        }
+                    }
+                    .navbar-brand {
+                        display: none;
+                    }
+                    .navbar-nav {
+                        margin-top: 20px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    section.sk-job-market-form {
+        padding: 40px 0;
+        .sk-form {
+            padding: 30px 20px !important;
+            form {
+                .body {
+                    input {
+                        padding: 12px 20px;
+                    }
+                }
+                .foot {
+                    .sk-action-btn {
+                        padding: 6px 12px !important;
+                        font-size: 14px !important;
+                    }
+                    & > button {
+                        margin-top: 20px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .sk-footer-top {
+            .widget {
+                margin: 8px 0 !important;
+                .custom_logo {
+                    width: auto;
+                    height: 70px;
+                }
+                .footer-text-title {
+                    font-size: 15px;
+                    margin-bottom: 8px;
+                } 
+                .list-unstyled {
+                    li {
+                        a {
+                            line-height: 26px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .sk-help {
+            .text {
+                font-size: 28px;
+            }
+        }
+        .sk-copyright {
+            .container {
+                .row {
+                    flex-direction: column-reverse;
+                    .text {
+                        text-align: center;
+                        margin-top: 12px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    section.job-subscribe {
+        .content {
+            form {
+                padding-top: 0 !important;
+                .bg-subscribe {
+                    font-size: 14px;
+                    padding: 0 12px !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    
+}
